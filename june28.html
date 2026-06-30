@@ -18,8 +18,83 @@
 
 
   </head>
+
+  <style>
+ /* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.2);
+}
+
+.modal-content {
+  background: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  max-width: 90%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover { color: #000; }
+
+#myBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #888;
+  color: rgb(0,0,0);
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+* {
+  font-family: monospace;
+}
+
+#myBtn:hover { background-color: rgb(229, 241, 61); }
+   
+  </style>
+
   <body>
   
+<button id="myBtn">What is this?</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>On June 28, Rhizome hosted <a href="https://rhizome.org/events/solar-web-art-sunday/">"Solar Web Art ☼day</a>", a day long event at the New Museum in New York City. As part of the event, guests were invited to create their own ASCII art, to be installed in the Museum of ASCII Art (you are here). <br><br> Artists include: @jsooza, Lindsey B, 2oo8, lindapeanut, tornado, ARNE REYNER, tay, cupcakelover, pea, spiderpeople, zb1, zb2, pride, zb3, zv100, Rye, Sam Weintraub, when you pull too many juiceboxes from the prompt, john, justin, HANNAH K, lucy, cole, maya :), new pal relaxed 1 &2, Jakob's oldschool clockowl, horsie on a bed, flower garden elena, horsie goodnight, Sahiba's bugman, and Henry Fong :)</p>
+  </div>
+</div>
+<script>
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() { modal.style.display = "block"; }
+span.onclick = function() { modal.style.display = "none"; }
+window.onclick = function(event) {
+  if (event.target == modal) { modal.style.display = "none"; }
+}
+</script>
 
 <img src="images/gallery-nrmal.png" style="width: 200%;">
 
